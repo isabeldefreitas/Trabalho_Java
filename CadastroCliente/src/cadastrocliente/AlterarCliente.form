@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JDialogFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="2"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="CEP" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="cidade" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="bairro" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="complemento" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="telefone" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="email" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="logradouro" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="numero" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="nome" alignment="1" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="entNome" alignment="0" max="32767" attributes="0"/>
+                  <Component id="entTel" alignment="0" min="-2" pref="159" max="-2" attributes="0"/>
+                  <Component id="entEmail" alignment="0" max="32767" attributes="0"/>
+                  <Component id="entLogra" alignment="0" max="32767" attributes="0"/>
+                  <Component id="entNum" alignment="0" min="-2" pref="160" max="-2" attributes="0"/>
+                  <Component id="entComplemento" alignment="0" max="32767" attributes="0"/>
+                  <Component id="entBairro" alignment="0" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Component id="entCidade" alignment="1" max="32767" attributes="0"/>
+                          <Component id="entCEP" alignment="1" min="-2" pref="160" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="estado" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="entEstado" min="-2" pref="97" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+              </Group>
+              <EmptySpace pref="76" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="nome" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="entNome" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="telefone" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="entTel" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="email" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="entEmail" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="logradouro" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="entLogra" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="numero" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="entNum" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="complemento" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="entComplemento" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="bairro" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="cidade" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="entEstado" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="entCidade" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="estado" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="CEP" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="entCEP" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Component id="entBairro" alignment="0" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="38" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JButton" name="jButton1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Ok"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="nome">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Nome:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="entNome">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="entNomeActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButton2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Cancelar"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="telefone">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Telefone:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="entTel">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="entTelActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="email">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Email:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="entEmail">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="entEmailActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="logradouro">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Logradouro:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="entLogra">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="entLograActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="numero">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="N&#xfa;mero:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="entNum">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="entNumActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="complemento">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Complemento:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="entComplemento">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="entComplementoActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="bairro">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Bairro:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="entBairro">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="entBairroActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cidade">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Cidade:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="entCidade">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="entCidadeActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="CEP">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="CEP:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="entCEP">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="entCEPActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="entEstado">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="55">
+            <StringItem index="0" value="Acre (AC)"/>
+            <StringItem index="1" value="Alagoas (AL)"/>
+            <StringItem index="2" value="Amap&#xe1; (AP)"/>
+            <StringItem index="3" value="Amazonas (AM)"/>
+            <StringItem index="4" value="Bahia (BA)"/>
+            <StringItem index="5" value="Cear&#xe1; (CE)"/>
+            <StringItem index="6" value="Distrito Federal (DF)"/>
+            <StringItem index="7" value="Esp&#xed;rito Santo (ES)"/>
+            <StringItem index="8" value="Goi&#xe1;s (GO)"/>
+            <StringItem index="9" value="Maranh&#xe3;o (MA)"/>
+            <StringItem index="10" value="Mato Grosso (MT)"/>
+            <StringItem index="11" value="Mato Grosso do Sul (MS)"/>
+            <StringItem index="12" value="Minas Gerais (MG)"/>
+            <StringItem index="13" value=" "/>
+            <StringItem index="14" value=" "/>
+            <StringItem index="15" value="Par&#xe1; (PA): paraense"/>
+            <StringItem index="16" value=" "/>
+            <StringItem index="17" value=" "/>
+            <StringItem index="18" value="Para&#xed;ba (PB): paraibano"/>
+            <StringItem index="19" value=" "/>
+            <StringItem index="20" value=" "/>
+            <StringItem index="21" value="Paran&#xe1; (PR): paranaense"/>
+            <StringItem index="22" value=" "/>
+            <StringItem index="23" value=" "/>
+            <StringItem index="24" value="Pernambuco (PE): pernambucano"/>
+            <StringItem index="25" value=" "/>
+            <StringItem index="26" value=" "/>
+            <StringItem index="27" value="Piau&#xed; (PI): piauiense"/>
+            <StringItem index="28" value=" "/>
+            <StringItem index="29" value=" "/>
+            <StringItem index="30" value="Rio de Janeiro (RJ): fluminense (carioca &#xe9; quem &#xe9; da cidade do Rio de Janeiro)"/>
+            <StringItem index="31" value=" "/>
+            <StringItem index="32" value=" "/>
+            <StringItem index="33" value="Rio Grande do Norte (RN): potiguar ou norte-rio-grandense"/>
+            <StringItem index="34" value=" "/>
+            <StringItem index="35" value=" "/>
+            <StringItem index="36" value="Rio Grande do Sul (RS): ga&#xfa;cho ou sul-rio-grandense"/>
+            <StringItem index="37" value=" "/>
+            <StringItem index="38" value=" "/>
+            <StringItem index="39" value="Rond&#xf4;nia (RO): rondoniano ou rondoniense"/>
+            <StringItem index="40" value=" "/>
+            <StringItem index="41" value=" "/>
+            <StringItem index="42" value="Roraima (RR): roraimense"/>
+            <StringItem index="43" value=" "/>
+            <StringItem index="44" value=" "/>
+            <StringItem index="45" value="Santa Catarina (SC): catarinense ou barriga-verde"/>
+            <StringItem index="46" value=" "/>
+            <StringItem index="47" value=" "/>
+            <StringItem index="48" value="S&#xe3;o Paulo (SP): paulista (quem &#xe9; da capital &#xe9; paulistano)"/>
+            <StringItem index="49" value=" "/>
+            <StringItem index="50" value=" "/>
+            <StringItem index="51" value="Sergipe (SE): sergipano"/>
+            <StringItem index="52" value=" "/>
+            <StringItem index="53" value=" "/>
+            <StringItem index="54" value="Tocantins (TO): tocantinense"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="entEstadoActionPerformed"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="estado">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Estado:"/>
+      </Properties>
+    </Component>
+  </SubComponents>
+</Form>

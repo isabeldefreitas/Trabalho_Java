@@ -15,7 +15,7 @@ public class CadastroCliente {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        JanelaCadastro quadroDialogo = new JanelaCadastro (null, true);
+        IncluirCliente quadroDialogo = new IncluirCliente (null, true);
 quadroDialogo.setLocationRelativeTo(null);
 quadroDialogo.setVisible(true);
 }
