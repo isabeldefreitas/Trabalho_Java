@@ -11,14 +11,14 @@ package cadastrocliente;
   public class Pessoa {
 private String nome;
 private String telefone;
-private String Email;
-private String Logradouro;
-private String Numero;
-private String Complemento;
-private String Bairro;
-private String Cidade;
-private String Estado;
-private String Cep;
+private String email;
+private String logradouro;
+private String numero;
+private String complemento;
+private String bairro;
+private String cidade;
+private String estado;
+private String cep;
 
 public String obterNome(){
 return nome;
@@ -26,7 +26,36 @@ return nome;
 public String obterTelefone(){
 return telefone;
 }
+public String obterEmail(){
+return email;
+}
+public String obterLogradouro(){
+return logradouro;
+}
 
+public String obterNumero(){
+return numero;
+}
+
+
+public String obterComplemento(){
+return complemento ;
+}
+
+public String obterBairro(){
+return bairro ;
+}
+
+public String obterCidade(){
+return cidade;
+}
+
+public String obterEstado(){
+return estado ;
+}
+public String obterCep(){
+return cep;
+}
 public void atualizarNome(String nome){
 this.nome = nome;
 }
@@ -34,52 +63,36 @@ this.nome = nome;
 public void atualizarTelefone(String telefone){
 this.telefone = telefone;
 }
-public String obterEmail(){
-return Email;
+
+public void atualizarEmail(String email){
+this.email = email;
 }
-public void atualizarEmail(String nome){
-this.Email = Email;
+
+public void atualizarLogradouro(String logradouro){
+this.logradouro = logradouro;
 }
-public String obterLogradouro(){
-return Logradouro;
+
+public void atualizarNumero(String numero){
+this.numero = numero;
 }
-public void atualizarLogradouro(String nome){
-this.Logradouro = Logradouro;
+
+public void atualizarComplemento(String complemento){
+this.complemento = complemento;
 }
-public String obterNumero(){
-return Numero;
+
+public void atualizarBairro(String bairro){
+this.bairro = bairro ;
 }
-public void atualizarNumero(String nome){
-this.Numero = Numero;
+
+public void atualizarCidade(String cidade){
+this.cidade = cidade;
 }
-public String obterComplemento(){
-return Complemento ;
+
+public void atualizarEstado(String estado){
+this.estado = estado;
 }
-public void atualizarComplemento(String nome){
-this.Complemento = Complemento;
-}
-public String obterBairro(){
-return Bairro ;
-}
-public void atualizarBairro(String nome){
-this.Bairro = Bairro ;
-}
-public String obterCidade(){
-return Cidade;
-}
-public void atualizarCidade(String nome){
-this.Cidade = Cidade;
-}
-public String obterEstado(){
-return Estado ;
-}
-public void atualizarEstado(String nome){
-this.Estado = Estado;
-}
-public String obterCep(){
-return Cep;
-}
-public void atualizarCep(String nome){
-this.Cep =Cep ;
+
+public void atualizarCep(String cep){
+this.cep =cep ;
 }
   }

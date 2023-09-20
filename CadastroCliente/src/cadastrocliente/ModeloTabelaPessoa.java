@@ -33,6 +33,7 @@ public ModeloTabelaPessoa(List<Pessoa>pessoas) {
 this.pessoas = new ArrayList<Pessoa>(pessoas);
 }
 
+
 @Override
 public int getColumnCount(){
 return colunas.length;
