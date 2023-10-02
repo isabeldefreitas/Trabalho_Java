@@ -4,95 +4,127 @@
  */
 package cadastrocliente;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author tatip
  */
   public class Pessoa {
-private String nome;
-private String telefone;
-private String email;
-private String logradouro;
-private String numero;
-private String complemento;
-private String bairro;
-private String cidade;
-private String estado;
-private String cep;
+      
+        private String nome;
+        private String telefone;
+        private String email;
+        private String logradouro;
+        private String numero;
+        private String complemento;
+        private String bairro;
+        private String cidade;
+        private String estado;
+        private String cep;
 
-public String obterNome(){
-return nome;
-}
-public String obterTelefone(){
-return telefone;
-}
-public String obterEmail(){
-return email;
-}
-public String obterLogradouro(){
-return logradouro;
-}
+        public String obterNome(){
+        return nome;
+        }
+        public String obterTelefone(){
+        return telefone;
+        }
+        public String obterEmail(){
+        return email;
+        }
+        public String obterLogradouro(){
+        return logradouro;
+        }
 
-public String obterNumero(){
-return numero;
-}
+        public String obterNumero(){
+        return numero;
+        }
 
 
-public String obterComplemento(){
-return complemento ;
-}
+        public String obterComplemento(){
+        return complemento ;
+        }
 
-public String obterBairro(){
-return bairro ;
-}
+        public String obterBairro(){
+        return bairro ;
+        }
 
-public String obterCidade(){
-return cidade;
-}
+        public String obterCidade(){
+        return cidade;
+        }
 
-public String obterEstado(){
-return estado ;
-}
-public String obterCep(){
-return cep;
-}
-public void atualizarNome(String nome){
-this.nome = nome;
-}
+        public String obterEstado(){
+        return estado ;
+        }
+        public String obterCep(){
+        return cep;
+        }
+        public void atualizarNome(String nome){
+        this.nome = nome;
+        }
 
-public void atualizarTelefone(String telefone){
-this.telefone = telefone;
-}
+        public void atualizarTelefone(String telefone){
+        this.telefone = telefone;
+        }
 
-public void atualizarEmail(String email){
-this.email = email;
-}
+        public void atualizarEmail(String email){
+        this.email = email;
+        }
 
-public void atualizarLogradouro(String logradouro){
-this.logradouro = logradouro;
-}
+        public void atualizarLogradouro(String logradouro){
+        this.logradouro = logradouro;
+        }
 
-public void atualizarNumero(String numero){
-this.numero = numero;
-}
+        public void atualizarNumero(String numero){
+        this.numero = numero;
+        }
 
-public void atualizarComplemento(String complemento){
-this.complemento = complemento;
-}
+        public void atualizarComplemento(String complemento){
+        this.complemento = complemento;
+        }
 
-public void atualizarBairro(String bairro){
-this.bairro = bairro ;
-}
+        public void atualizarBairro(String bairro){
+        this.bairro = bairro ;
+        }
 
-public void atualizarCidade(String cidade){
-this.cidade = cidade;
-}
+        public void atualizarCidade(String cidade){
+        this.cidade = cidade;
+        }
 
-public void atualizarEstado(String estado){
-this.estado = estado;
-}
+        public void atualizarEstado(String estado){
+        this.estado = estado;
+        }
 
-public void atualizarCep(String cep){
-this.cep =cep ;
-}
+        public void atualizarCep(String cep){
+        this.cep =cep ;
+        }
+        
+        public String salvar() {
+            try {
+                FileWriter fw = new FileWriter("Pessoa.txt", true); // Use true para abrir o arquivo em modo de anexação
+                PrintWriter pw = new PrintWriter(fw);
+                pw.println("Nome:" + this.nome);
+                pw.println("Telefone:" + this.telefone);
+                pw.println("Email:" + this.email);
+                pw.println("Logradouro:" + this.logradouro);
+                pw.println("Numero:" + this.numero);
+                pw.println("Complemento:" + this.complemento);
+                pw.println("Bairro:" + this.bairro);
+                pw.println("Cidade:" + this.cidade);
+                pw.println("Estado:" + this.estado);
+                pw.println("Cep:" + this.cep);
+                pw.println(); // Adicione uma linha em branco para separar os registros
+                pw.flush();
+                pw.close();
+                fw.close();
+            } catch (IOException ex) {
+                Logger.getLogger(Pessoa.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            return null;
+        }
+
   }
