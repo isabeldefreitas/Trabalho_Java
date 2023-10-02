@@ -10,6 +10,15 @@ import javax.swing.JOptionPane;
 import javax.swing.*;
 import javax.swing.table.DefaultTableCellRenderer;
 import java.awt.Component;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 /**
  *
  * @author tatip
@@ -23,12 +32,74 @@ public class JanelaCadastro extends javax.swing.JDialog {
     /**
      * Creates new form JanelaCadastro
      */
-    public JanelaCadastro(java.awt.Frame parent, boolean modal) {
+    
+     public JanelaCadastro(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
-        modeloPessoa = new ModeloTabelaPessoa(new ArrayList<Pessoa>());
-tabPessoa.setModel(modeloPessoa);
+        modeloPessoa = new ModeloTabelaPessoa(new ArrayList<>());
+        tabPessoa.setModel(modeloPessoa);
+        carregarDadosDoArquivo();
     }
+     
+     
+    
+    private void carregarDadosDoArquivo() {
+    ArrayList<Pessoa> pessoas = new ArrayList<>();
+
+    try (BufferedReader br = new BufferedReader(new FileReader("Pessoa.txt"))) {
+        String linha;
+        Pessoa pessoa = null;
+
+        while ((linha = br.readLine()) != null) {
+            String[] partes = linha.split(":");
+            if (partes.length == 2) {
+                String campo = partes[0].trim();
+                String valor = partes[1].trim();
+
+                switch (campo) {
+                    case "Nome":
+                        pessoa = new Pessoa();
+                        pessoa.atualizarNome(valor);
+                        break;
+                    case "Telefone":
+                        pessoa.atualizarTelefone(valor);
+                        break;
+                    case "Email":
+                        pessoa.atualizarEmail(valor);
+                        break;
+                    case "Logradouro":
+                        pessoa.atualizarLogradouro(valor);
+                        break;
+                    case "Numero":
+                        pessoa.atualizarNumero(valor);
+                        break;
+                    case "Complemento":
+                        pessoa.atualizarComplemento(valor);
+                        break;
+                    case "Bairro":
+                        pessoa.atualizarBairro(valor);
+                        break;
+                    case "Cidade":
+                        pessoa.atualizarCidade(valor);
+                        break;
+                    case "Estado":
+                        pessoa.atualizarEstado(valor);
+                        break;
+                    case "Cep":
+                        pessoa.atualizarCep(valor);
+                        pessoas.add(pessoa);
+                        break;
+                }
+            }
+        }
+    } catch (IOException ex) {
+        JOptionPane.showMessageDialog(null, "Erro ao carregar dados do arquivo: " + ex.getMessage());
+    }
+
+    modeloPessoa.setPessoas(pessoas); // Defina os dados na tabela
+}
+
+
 
    
     @SuppressWarnings("unchecked")
@@ -58,6 +129,7 @@ tabPessoa.setModel(modeloPessoa);
         jScrollPane1.setViewportView(jTable1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Cadastros");
 
         buIncluir.setText("Incluir");
         buIncluir.addActionListener(new java.awt.event.ActionListener() {
@@ -141,36 +213,36 @@ tabPessoa.setModel(modeloPessoa);
 
     private void buAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buAlterarActionPerformed
 
-int indice = tabPessoa.getSelectedRow();
-if (indice >= 0){
-Pessoa pessoa = modeloPessoa.obterPessoa(indice);
-if (JanelaPessoa.executar(OperacaoCadastro.alterar, pessoa)){
-modeloPessoa.atualizarPessoa(indice, pessoa);
-}
-}
+        int indice = tabPessoa.getSelectedRow();
+        if (indice >= 0){
+        Pessoa pessoa = modeloPessoa.obterPessoa(indice);
+        if (JanelaPessoa.executar(OperacaoCadastro.alterar, pessoa)){
+        modeloPessoa.atualizarPessoa(indice, pessoa);
+        }
+        }
     }//GEN-LAST:event_buAlterarActionPerformed
 
     private void buIncluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buIncluirActionPerformed
 
-Pessoa pessoa = new Pessoa();
-if (JanelaPessoa.executar(OperacaoCadastro.incluir, pessoa)){
-modeloPessoa.incluirPessoa(pessoa);
+        Pessoa pessoa = new Pessoa();
+        if (JanelaPessoa.executar(OperacaoCadastro.incluir, pessoa)){
+        modeloPessoa.incluirPessoa(pessoa);
 }
     }//GEN-LAST:event_buIncluirActionPerformed
 
     private void buExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buExcluirActionPerformed
-int indice = tabPessoa.getSelectedRow();
-if (indice >= 0){
-modeloPessoa.excluirPessoa(indice);
-}        
+        int indice = tabPessoa.getSelectedRow();
+        if (indice >= 0){
+        modeloPessoa.excluirPessoa(indice);
+        }        
     }//GEN-LAST:event_buExcluirActionPerformed
 
     private void SelecionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SelecionarActionPerformed
 
-int indice = tabPessoa.getSelectedRow();
-if (indice >= 0){
-Pessoa pessoa = modeloPessoa.obterPessoa(indice);
-JanelaPessoa.executar(OperacaoCadastro.consultar, pessoa);}
+        int indice = tabPessoa.getSelectedRow();
+        if (indice >= 0){
+        Pessoa pessoa = modeloPessoa.obterPessoa(indice);
+        JanelaPessoa.executar(OperacaoCadastro.consultar, pessoa);}
     }//GEN-LAST:event_SelecionarActionPerformed
 
     /**

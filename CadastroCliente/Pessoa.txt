@@ -1,0 +1,111 @@
+Nome:isabel de freitas
+Telefone:22476158
+Email:isabel@gmail.com
+Logradouro:rua b
+Numero:707
+Complemento:perto da praca
+Bairro:meio da serra
+Cidade:petropolis
+Estado:Rio de Janeiro RJ
+Cep:25635116
+Nome:gabriele de freitas
+Telefone:2244785
+Email:gab@gmail.com
+Logradouro:rua b
+Numero:707
+Complemento:
+Bairro:meio da serra
+Cidade:petropolis
+Estado:Rio de Janeiro RJ
+Cep:25635114
+Nome:Tatiane Pink
+Telefone:22476158
+Email:pink@gmail.com
+Logradouro:rua k
+Numero:33
+Complemento:perto da praia
+Bairro:
+Cidade:Guapi
+Estado:Rio de Janeiro RJ
+Cep:45639778
+Nome:bruno
+Telefone:854712369
+Email:bruno@gmail
+Logradouro:
+Numero:25
+Complemento:
+Bairro:quitandinha
+Cidade:petroolis
+Estado:Rio de Janeiro RJ
+Cep:25847156
+Nome:carlos
+Telefone:242587963
+Email:xarlos@gmail
+Logradouro:estrada velha
+Numero:2
+Complemento:
+Bairro:parada angelica
+Cidade:Mage
+Estado:Rio de Janeiro RJ
+Cep:54789632
+Nome:fernanda
+Telefone:8514723698
+Email:fer@gmail.com
+Logradouro:
+Numero:
+Complemento:
+Bairro:cascatinha
+Cidade:petroolis
+Estado:Rio de Janeiro RJ
+Cep:25698114
+Nome:teste1
+Telefone:
+Email:teste@gmail.com
+Logradouro:
+Numero:
+Complemento:
+Bairro:
+Cidade:
+Estado:Acre AC
+Cep:
+Nome:teste1
+Telefone:
+Email:
+Logradouro:
+Numero:
+Complemento:
+Bairro:
+Cidade:
+Estado:Acre AC
+Cep:
+Nome:teste 2
+Telefone:
+Email:
+Logradouro:
+Numero:
+Complemento:
+Bairro:
+Cidade:
+Estado:Amazonas AM
+Cep:
+Nome:tete
+Telefone:
+Email:
+Logradouro:
+Numero:
+Complemento:
+Bairro:
+Cidade:
+Estado:Acre AC
+Cep:
+Nome:tete
+Telefone:
+Email:
+Logradouro:
+Numero:
+Complemento:
+Bairro:
+Cidade:
+Estado:Acre AC
+Cep:
+

@@ -8,8 +8,12 @@ package cadastrocliente;
  *
  * @author tatip
  */
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JOptionPane;
 import javax.swing.table.AbstractTableModel;
 
 public class ModeloTabelaPessoa extends AbstractTableModel {
@@ -134,10 +138,48 @@ pessoas.set(indice, pessoa);
 fireTableRowsUpdated(indice, indice);
 }
 
-public void excluirPessoa(int indice){
-pessoas.remove(indice);
-fireTableRowsDeleted(indice, indice);
-}
+public void excluirPessoa(int indice) {
+        Pessoa pessoaExcluida = pessoas.remove(indice);
+        fireTableRowsDeleted(indice, indice);
+
+        
+        atualizarArquivo(pessoas);
+    }
+
+private void atualizarArquivo(List<Pessoa> pessoas) {
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter("Pessoa.txt"))) {
+            for (Pessoa pessoa : pessoas) {
+                bw.write("Nome:" + pessoa.obterNome());
+                bw.newLine();
+                bw.write("Telefone:" + pessoa.obterTelefone());
+                bw.newLine();
+                bw.write("Email:" + pessoa.obterEmail());
+                bw.newLine();
+                bw.write("Logradouro:" + pessoa.obterLogradouro());
+                bw.newLine();
+                bw.write("Numero:" + pessoa.obterNumero());
+                bw.newLine();
+                bw.write("Complemento:" + pessoa.obterComplemento());
+                bw.newLine();
+                bw.write("Bairro:" + pessoa.obterBairro());
+                bw.newLine();
+                bw.write("Cidade:" + pessoa.obterCidade());
+                bw.newLine();
+                bw.write("Estado:" + pessoa.obterEstado());
+                bw.newLine();
+                bw.write("Cep:" + pessoa.obterCep());
+                bw.newLine();
+            }
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(null, "Erro ao atualizar o arquivo: " + ex.getMessage());
+        }
+    }
+
+    public void setPessoas(List<Pessoa> pessoas) {
+        this.pessoas.clear(); // Limpa a lista existente
+        this.pessoas.addAll(pessoas); // Adiciona as novas pessoas à lista
+        fireTableDataChanged(); // Notifica a tabela sobre a mudança de dados
+    }
 }
  
 

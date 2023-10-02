@@ -40,36 +40,36 @@ OperacaoCadastro operacaoCadastro,
 Pessoa pessoa) {
 super(parent, true );//Abre como modal
 
-confirmado = false;
-this.operacaoCadastro = operacaoCadastro;
-this.pessoa = pessoa;
-initComponents();
-if (operacaoCadastro == OperacaoCadastro.alterar ||
-operacaoCadastro == OperacaoCadastro.consultar){
-edNome.setText(pessoa.obterNome());
-edTelefone.setText(pessoa.obterTelefone());
-edEmail.setText(pessoa.obterEmail());
-edLogradouro.setText(pessoa.obterLogradouro());
-edNumero.setText(pessoa.obterNumero());
-edComplemento.setText(pessoa.obterComplemento());
-edBairro.setText(pessoa.obterBairro());
-edCidade.setText(pessoa.obterCidade());
-edEstado.setSelectedItem(pessoa.obterEstado());
-edCep.setText(pessoa.obterCep());
-}
-buCancelar.setVisible(operacaoCadastro != OperacaoCadastro.consultar);
-edNome.setEnabled(operacaoCadastro != OperacaoCadastro.consultar);
-edTelefone.setEnabled(operacaoCadastro != OperacaoCadastro.consultar);
-edEmail.setEnabled(operacaoCadastro != OperacaoCadastro.consultar);
-edLogradouro.setEnabled(operacaoCadastro != OperacaoCadastro.consultar);
-edNumero.setEnabled(operacaoCadastro != OperacaoCadastro.consultar);
-edComplemento.setEnabled(operacaoCadastro != OperacaoCadastro.consultar);
-edBairro.setEnabled(operacaoCadastro != OperacaoCadastro.consultar);
-edCidade.setEnabled(operacaoCadastro != OperacaoCadastro.consultar);
-edEstado.setEnabled(operacaoCadastro != OperacaoCadastro.consultar);
-edCep.setEnabled(operacaoCadastro != OperacaoCadastro.consultar);
-}
-    
+        confirmado = false;
+        this.operacaoCadastro = operacaoCadastro;
+        this.pessoa = pessoa;
+        initComponents();
+        if (operacaoCadastro == OperacaoCadastro.alterar ||
+        operacaoCadastro == OperacaoCadastro.consultar){
+        edNome.setText(pessoa.obterNome());
+        edTelefone.setText(pessoa.obterTelefone());
+        edEmail.setText(pessoa.obterEmail());
+        edLogradouro.setText(pessoa.obterLogradouro());
+        edNumero.setText(pessoa.obterNumero());
+        edComplemento.setText(pessoa.obterComplemento());
+        edBairro.setText(pessoa.obterBairro());
+        edCidade.setText(pessoa.obterCidade());
+        edEstado.setSelectedItem(pessoa.obterEstado());
+        edCep.setText(pessoa.obterCep());
+        }
+        buCancelar.setVisible(operacaoCadastro != OperacaoCadastro.consultar);
+        edNome.setEnabled(operacaoCadastro != OperacaoCadastro.consultar);
+        edTelefone.setEnabled(operacaoCadastro != OperacaoCadastro.consultar);
+        edEmail.setEnabled(operacaoCadastro != OperacaoCadastro.consultar);
+        edLogradouro.setEnabled(operacaoCadastro != OperacaoCadastro.consultar);
+        edNumero.setEnabled(operacaoCadastro != OperacaoCadastro.consultar);
+        edComplemento.setEnabled(operacaoCadastro != OperacaoCadastro.consultar);
+        edBairro.setEnabled(operacaoCadastro != OperacaoCadastro.consultar);
+        edCidade.setEnabled(operacaoCadastro != OperacaoCadastro.consultar);
+        edEstado.setEnabled(operacaoCadastro != OperacaoCadastro.consultar);
+        edCep.setEnabled(operacaoCadastro != OperacaoCadastro.consultar);
+        }
+
     public boolean operacaoConfirmada(){
 return confirmado;
 }
@@ -363,21 +363,21 @@ return confirmado;
         
         if (operacaoCadastro != OperacaoCadastro.consultar){
 
-pessoa.atualizarNome(edNome.getText());
-pessoa.atualizarTelefone(edTelefone.getText());
-pessoa.atualizarEmail(edEmail.getText());
-pessoa.atualizarLogradouro(edLogradouro.getText());
-pessoa.atualizarNumero(edNumero.getText());
-pessoa.atualizarComplemento(edComplemento.getText());
-pessoa.atualizarBairro(edBairro.getText());
-pessoa.atualizarCidade(edCidade.getText());
+        pessoa.atualizarNome(edNome.getText());
+        pessoa.atualizarTelefone(edTelefone.getText());
+        pessoa.atualizarEmail(edEmail.getText());
+        pessoa.atualizarLogradouro(edLogradouro.getText());
+        pessoa.atualizarNumero(edNumero.getText());
+        pessoa.atualizarComplemento(edComplemento.getText());
+        pessoa.atualizarBairro(edBairro.getText());
+        pessoa.atualizarCidade(edCidade.getText());
 
 
-String estadoSelecionado = (String) edEstado.getSelectedItem();
-pessoa.atualizarEstado(estadoSelecionado);
-pessoa.atualizarCep(edCep.getText());
+        String estadoSelecionado = (String) edEstado.getSelectedItem();
+        pessoa.atualizarEstado(estadoSelecionado);
+        pessoa.atualizarCep(edCep.getText());
 
-confirmado = true;
+        confirmado = true;
 
 }
         
@@ -397,7 +397,7 @@ confirmado = true;
         pessoa.atualizarCep(edCep.getText());
 
         pessoa.salvar();
-        JOptionPane.showMessageDialog(null, "Cadastrado com sucesso!");
+        
 
         edTelefone.setText("");
         edTelefone.setText("");

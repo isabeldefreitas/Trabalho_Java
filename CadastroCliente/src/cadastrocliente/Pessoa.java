@@ -105,7 +105,7 @@ import java.util.logging.Logger;
         
         public String salvar() {
             try {
-                FileWriter fw = new FileWriter("Pessoa.txt", true); // Use true para abrir o arquivo em modo de anexação
+                FileWriter fw = new FileWriter("Pessoa.txt", true); 
                 PrintWriter pw = new PrintWriter(fw);
                 pw.println("Nome:" + this.nome);
                 pw.println("Telefone:" + this.telefone);
@@ -117,7 +117,7 @@ import java.util.logging.Logger;
                 pw.println("Cidade:" + this.cidade);
                 pw.println("Estado:" + this.estado);
                 pw.println("Cep:" + this.cep);
-                pw.println(); // Adicione uma linha em branco para separar os registros
+                pw.println(); 
                 pw.flush();
                 pw.close();
                 fw.close();
