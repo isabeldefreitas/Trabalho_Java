@@ -39,6 +39,19 @@ public class VendaBD {
         editarBanco(insert, v, 1);
     }
                 
+    public void atualizarQuantidadeProduto(String codProduto, int quantidadeVendida) {
+    try {
+        String update = "UPDATE produtos SET quantidade = quantidade - ? WHERE cod_produto = ?";
+        PreparedStatement stmt = conexao.prepareStatement(update);
+        stmt.setInt(1, quantidadeVendida);
+        stmt.setString(2, codProduto);
+        stmt.executeUpdate();
+        stmt.close();
+    } catch (SQLException e) {
+        JOptionPane.showMessageDialog(null, e);
+    }
+}
+
     public ArrayList<Venda>lerBancoVenda(){
         try {
             ArrayList<Venda> lista = new ArrayList<>();

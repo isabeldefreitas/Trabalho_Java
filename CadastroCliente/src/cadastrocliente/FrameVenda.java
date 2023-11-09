@@ -275,29 +275,37 @@ private void updateRow() {
     }//GEN-LAST:event_BuscarButtonActionPerformed
 
     private void FinalizarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FinalizarButtonActionPerformed
-        switch(FrameConfirmacao("Confirma a finalização da venda?")){
-            case 0:
-                String pagamento = null;
-                if (DebitoButton.isSelected())
-                    pagamento = "Debito";
-                else if(CreditoButton.isSelected())
-                    pagamento = "Credito";
-                else if (DinheiroButton.isSelected())
-                    pagamento = "Dinheiro";
-                for(int i = 0; i < ListaV.size(); i++){
-                    ListaV.get(i).setData(String.valueOf(hoje));
-                    ListaV.get(i).setCliente(c.getCodigo());
-                    ListaV.get(i).setPagamento(pagamento);
-                    ListaV.get(i).setTotal(String.valueOf(soma));
-                    bdv.adicionarVenda(ListaV.get(i));
-                    bdp.atualizarProduto(ListaV.get(i).getCodProduto(),ListaV.get(i).getQtdProduto(),DataLabel.getText());
-                }
-                JOptionPane.showMessageDialog(null, "Venda adicionada!");
-                dispose();
-                break;
-            case 1:
-                break;
-        }
+        switch (FrameConfirmacao("Confirma a finalização da venda?")) {
+        case 0:
+            String pagamento = null;
+            if (DebitoButton.isSelected())
+                pagamento = "Debito";
+            else if (CreditoButton.isSelected())
+                pagamento = "Credito";
+            else if (DinheiroButton.isSelected())
+                pagamento = "Dinheiro";
+            
+            for (int i = 0; i < ListaV.size(); i++) {
+    ListaV.get(i).setData(String.valueOf(hoje));
+    ListaV.get(i).setCliente(c.getCodigo());
+    ListaV.get(i).setPagamento(pagamento);
+    ListaV.get(i).setTotal(String.valueOf(soma));
+    bdv.adicionarVenda(ListaV.get(i));
+
+                
+                // Atualize a quantidade de produtos no banco de dados aqui
+                bdp.atualizarProduto(ListaV.get(i).getCodProduto(), ListaV.get(i).getQtdProduto());
+                bdp.atualizarDataUltimaVenda(ListaV.get(i).getCodProduto(), DataLabel.getText());
+            }
+            
+            JOptionPane.showMessageDialog(null, "Venda adicionada!");
+            dispose();
+            break;
+        case 1:
+            break;
+    }
+        
+        
     }//GEN-LAST:event_FinalizarButtonActionPerformed
 
     private void AdicionarProdutoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AdicionarProdutoButtonActionPerformed

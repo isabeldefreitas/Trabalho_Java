@@ -58,6 +58,21 @@ public class ProdutosBD {
         } 
     }
     
+    public void atualizarDataUltimaVenda(String codigo, String data) {
+    try {
+        String update = "update vendapdv.produto set data = ? where codigo = ?";
+        PreparedStatement stmt = conexao.prepareStatement(update);
+        stmt.setString(1, data);
+        stmt.setString(2, codigo);
+        stmt.execute();
+        stmt.close();
+    } catch (SQLException e) {
+        JOptionPane.showMessageDialog(null, e);
+    }
+}
+
+
+    
     public ArrayList<Produto>lerBancoProdutos(){
         try {
             ArrayList<Produto> lista = new ArrayList<>();
@@ -114,18 +129,17 @@ public class ProdutosBD {
         }
         return null;
     }
-    public void atualizarProduto(String codigo, String qtd, String data){
+    public void atualizarProduto(String codigo, String qtd){
         try {
-            String preco = null;
-            String update = "update produto set vendapdv.quantidade = quantidade - ?, data = ? where codigo = ?";
-            PreparedStatement stmt = conexao.prepareStatement(update);
-            stmt.setString(1, qtd);
-            stmt.setString(2, data);
-            stmt.setString(3, codigo);
-            stmt.execute();
-            stmt.close(); 
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        }
+        String update = "update vendapdv.produto set quantidade = quantidade - ? where codigo = ?";
+        PreparedStatement stmt = conexao.prepareStatement(update);
+        stmt.setString(1, qtd);
+        stmt.setString(2, codigo);
+        stmt.execute();
+        stmt.close();
+    } catch (SQLException e) {
+        JOptionPane.showMessageDialog(null, e);
+    }
+
     }
 }
